@@ -1,0 +1,7 @@
+(library
+ (name app)
+ (libraries reason-react routes bindings)
+ (modes melange)
+ (melange.runtime_deps tailwind.css)
+ (preprocess
+  (pps reactjs-jsx-ppx melange.ppx)))

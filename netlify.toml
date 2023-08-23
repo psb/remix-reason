@@ -1,13 +1,26 @@
 [build]
-  command = "remix build"
-  publish = "public"
+command = "remix build"
+publish = "public"
 
 [[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/server"
-  status = 200
+from = "/*"
+to = "/.netlify/functions/server"
+status = 200
 
 [[headers]]
-  for = "/build/*"
-  [headers.values]
-    "Cache-Control" = "public, max-age=31536000, immutable"
+for = "/build/*"
+[headers.values]
+"Cache-Control" = "public, max-age=31536000, immutable"
+
+# [functions]
+# directory = "reason_node_output/reason_netlify_functions"
+# node_bundler = "esbuild"
+# external_node_modules = [
+#     # "astro",
+#     "./reason_node_output/node_modules/@glennsl",
+#     "./reason_node_output/node_modules/bs-decoders",
+#     "./reason_node_output/node_modules/melange",
+#     "./reason_node_output/node_modules/melange-fetch",
+#     "./reason_node_output/node_modules/melange.belt",
+#     "./reason_node_output/node_modules/melange.runtime",
+# ]

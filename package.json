@@ -2,9 +2,11 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
+    "build": "cd _build/default/remix && remix build",
+    "dev": "cd _build/default/remix && remix dev",
     "start": "netlify serve",
+    "netlify-dev": "cd _build/default/remix && BROWSER=none netlify dev",
+    "netlify-preview": "cd _build/default/remix && BROWSER=none netlify serve",
     "typecheck": "tsc"
   },
   "dependencies": {

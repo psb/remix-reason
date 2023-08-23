@@ -1,0 +1,32 @@
+opam-version: "2.0"
+synopsis: "Remix and Reason"
+description: "Remix and Reason"
+maintainer: ["Paul Bacchus"]
+authors: ["Paul Bacchus"]
+license: "MIT"
+homepage: "https://github.com/psb/remix-reason"
+bug-reports: "https://github.com/psb/remix-reason/issues"
+depends: [
+  "ocaml" {>= "4.14.0" & < "5.0.0"}
+  "reason" {>= "3.9.0" & < "4.0.0"}
+  "dune" {>= "3.8"}
+  "melange" {>= "1.0.0"}
+  "reactjs-jsx-ppx" {>= "1.0.0"}
+  "reason-react" {>= "0.11.0"}
+  "ocaml-lsp-server" {dev}
+  "dot-merlin-reader" {dev}
+  "odoc" {with-doc}
+  "ocamlformat" {>= "0.26.0"}
+  "atdgen"
+  "melange-fetch" {dev}
+  "melange-json" {dev}
+  "melange-webapi" {dev}
+  "melange-atdgen-codec-runtime" {dev}
+]
+pin-depends: [
+    ["melange-fetch.dev" "git+https://github.com/melange-community/melange-fetch.git#master"]
+    ["melange-json.dev" "git+https://github.com/melange-community/melange-json.git#main"]
+    ["melange-atdgen-codec-runtime.dev" "git+https://github.com/ahrefs/melange-atdgen-codec-runtime.git#master"]
+    ["melange-webapi.dev" "git+https://github.com/melange-community/melange-webapi.git#master"]
+]
+dev-repo: "git+https://github.com/psb/remix-reason.git"

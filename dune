@@ -1,0 +1,28 @@
+(dirs :standard \ node_modules)
+
+(env
+ (dev
+  (flags
+   (:standard -warn-error -69-32))))
+
+(melange.emit
+ (target remix)
+ (alias react)
+ (module_systems es6)
+ (libraries app)
+ (runtime_deps
+  netlify.toml
+  package.json
+  remix.config.js
+  remix.env.d.ts
+  server.ts
+  tailwind.config.ts
+  tsconfig.json
+  (source_tree public)))
+
+(melange.emit
+ (target reason_node_output)
+ (alias node)
+ ; (promote (until-clean))
+ (libraries reason_netlify_functions)
+ (module_systems es6))

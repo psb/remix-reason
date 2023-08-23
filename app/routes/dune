@@ -1,0 +1,6 @@
+(library
+ (name routes)
+ (libraries reason-react)
+ (modes melange)
+ (preprocess
+  (pps reactjs-jsx-ppx melange.ppx)))
