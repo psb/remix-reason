@@ -1,6 +1,14 @@
 (library
  (name routes)
- (libraries reason-react)
+ (libraries reason-react bindings)
  (modes melange)
+ (melange.runtime_deps _index.js)
  (preprocess
   (pps reactjs-jsx-ppx melange.ppx)))
+
+(rule
+ (target _index.js)
+ ; (deps ../_build/default/remix/app/routes/Index.js)
+ (deps %{project_root}/remix/app/routes/Index.js)
+ (action
+  (copy %{deps} %{target})))

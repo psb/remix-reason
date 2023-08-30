@@ -18,11 +18,11 @@
   server.ts
   tailwind.config.ts
   tsconfig.json
+  globals.d.ts
   (source_tree public)))
 
 (melange.emit
  (target reason_node_output)
  (alias node)
- ; (promote (until-clean))
  (libraries reason_netlify_functions)
  (module_systems es6))

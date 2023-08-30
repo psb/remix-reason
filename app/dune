@@ -2,6 +2,13 @@
  (name app)
  (libraries reason-react routes bindings)
  (modes melange)
- (melange.runtime_deps tailwind.css)
+ (melange.runtime_deps entry.server.tsx entry.client.tsx tailwind.css)
  (preprocess
   (pps reactjs-jsx-ppx melange.ppx)))
+
+; (rule
+;  (target entry.client.js)
+;  (deps ../_build/default/remix/app/entry_client.js)
+;  ; (deps %{project_root}/remix/app/root.js)
+;  (action
+;   (copy %{deps} %{target})))
