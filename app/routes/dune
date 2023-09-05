@@ -1,6 +1,6 @@
 (library
  (name routes)
- (libraries reason-react bindings)
+ (libraries reason-react bindings melange-fetch melange-json)
  (modes melange)
  (melange.runtime_deps _index.js)
  (preprocess
