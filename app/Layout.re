@@ -5,7 +5,7 @@ let make = (~children) => {
       <Bindings.Link
         to_="/" prefetch="intent" className="text-2xl font-semibold">
         {React.string("Rick & Morty")}
-        <span className="text-teal-500 gap-1"> {React.string("DB")} </span>
+        <span className="text-teal-500 ml-1"> {React.string("DB")} </span>
       </Bindings.Link>
     </nav>
     <main> children </main>

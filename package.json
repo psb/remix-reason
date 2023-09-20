@@ -1,12 +1,13 @@
 {
+  "type": "module",
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "cd _build/default/remix && remix build",
-    "dev": "cd _build/default/remix && remix dev",
+    "build": "remix build",
+    "dev": "remix dev",
     "start": "netlify serve",
-    "netlify-dev": "cd _build/default/remix && BROWSER=none netlify dev",
-    "netlify-preview": "cd _build/default/remix && BROWSER=none netlify serve",
+    "netlify-dev": "BROWSER=none netlify dev",
+    "netlify-preview": "BROWSER=none netlify serve",
     "typecheck": "tsc"
   },
   "dependencies": {
@@ -14,9 +15,9 @@
     "@netlify/functions": "^1.4.0",
     "@netlify/remix-adapter": "^1.0.0",
     "@netlify/remix-edge-adapter": "^1.2.0",
-    "@remix-run/css-bundle": "^1.19.3",
-    "@remix-run/node": "^1.19.3",
-    "@remix-run/react": "^1.19.3",
+    "@remix-run/css-bundle": "^2.0.0",
+    "@remix-run/node": "^2.0.0",
+    "@remix-run/react": "^2.0.0",
     "cross-env": "^7.0.3",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
@@ -24,9 +25,9 @@
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.19.3",
-    "@remix-run/eslint-config": "^1.19.3",
-    "@remix-run/serve": "^1.19.3",
+    "@remix-run/dev": "^2.0.0",
+    "@remix-run/eslint-config": "^2.0.0",
+    "@remix-run/serve": "^2.0.0",
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "@types/source-map-support": "^0.5.6",

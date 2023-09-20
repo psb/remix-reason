@@ -35,19 +35,19 @@ build_verbose: ## Build the project
 
 .PHONY: dev
 dev: ## Serve the application with a local HTTP server
-	npm run dev
+	cd _build/default/remix && npm run dev
 
 .PHONY: netlify
 netlify: ## Serve the application using netlify and with netlify functions
-	npm run netlify-dev
+	cd _build/default/remix && npm run netlify-dev
 
 .PHONY: preview
 preview: ## Serve a netlify production build locally
-	npm run netlify-serve
+	cd _build/default/remix && npm run netlify-serve
 
 .PHONY: bundle
 bundle: ## Bundle the JS
-	npm run build
+	cd _build/default/remix && npm run build
 
 .PHONY: clean
 clean: ## Clean build artifacts and other generated files
