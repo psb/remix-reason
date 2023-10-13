@@ -1,0 +1,6 @@
+(library
+ (name landing_index)
+ (libraries reason-react)
+ (modes melange)
+ (preprocess
+  (pps reactjs-jsx-ppx melange.ppx)))
